@@ -15,39 +15,39 @@ const NAV = [
 ]
 
 const PROOF_LINES = [
-  '15+ years across data, platform product, regulatory systems, and AI automation.',
-  'Led platforms and workflows supporting global reporting, AML, privacy, risk, and compliance operations.',
-  'Built AI-enabled automation that reduced manual intervention by 60% and improved turnaround by 50%.',
+  'Indian School of Business — Senior Digital Leadership Programme alum.',
+  '15+ years across AI products, agentic workflows, regulatory platforms, and the data foundations they run on.',
+  'Led AI-enabled automation that reduced manual intervention by 60% and improved workflow turnaround by 50% across multi-jurisdiction operations.',
 ]
 
 const PILLARS = [
   {
     n: '01',
-    title: 'Trusted AI Workflows',
-    body: 'AI-enabled automation built with validation, structured outputs, intentional human review, and the operational controls that regulated environments require.',
+    title: 'AI Product Strategy & Vision',
+    body: 'Defining the AI roadmap, build-versus-buy, and operating model for enterprises moving from AI pilots to production-grade products with measurable adoption.',
   },
   {
     n: '02',
-    title: 'Regulatory Platforms',
-    body: 'Common platforms for reporting, compliance, AML, SAR, privacy, KYC, risk, and global regulatory readiness — designed for the long arc of regulatory change.',
+    title: 'Agentic Workflows & Intelligent Automation',
+    body: 'Building LLM-agent systems with orchestration, validation, structured outputs, retries, and human-in-the-loop — designed for the audit and accountability regulated work requires.',
   },
   {
     n: '03',
-    title: 'Enterprise Product Transformation',
-    body: 'Turning fragmented, manual workflows into scalable platform capabilities with measurable adoption, efficiency, and a clear path from pilot to production.',
+    title: 'AI Governance & Controls',
+    body: 'The control plane that makes enterprise AI trustworthy: traceability, policy enforcement, explainability, intentional human review, and operational readiness from day one.',
   },
   {
     n: '04',
-    title: 'Data-to-AI Foundations',
-    body: 'Bringing deep data engineering, governance, lineage, and reporting experience directly into AI product execution. The substrate is the strategy.',
+    title: 'Data Foundations for AI',
+    body: 'Bringing deep data engineering, governance, lineage, and reporting depth directly into AI product execution. The substrate determines whether AI claims survive production.',
   },
 ]
 
 const WORK = [
   {
     n: '01',
-    title: 'AI-enabled workflow automation for regulated operations',
-    meta: 'Workflow automation · Multi-jurisdiction',
+    title: 'Agentic AI workflows for regulated operations',
+    meta: 'Agentic AI · LLM Orchestration · Multi-jurisdiction',
     context:
       'Manual review queues and policy-interpretation steps were bottlenecking throughput across compliance operations spanning multiple jurisdictions, with no acceptable path to add headcount.',
     move:
@@ -58,19 +58,19 @@ const WORK = [
       { v: '60%', l: 'Reduction in manual intervention' },
       { v: '50%', l: 'Faster processing turnaround' },
       { v: '5', l: 'Jurisdictions integrated' },
-      { v: '1', l: 'Patent application submitted' },
+      { v: 'Production-grade', l: 'Audit and human-in-the-loop design' },
     ],
   },
   {
     n: '02',
-    title: 'Unified regulatory reporting platform',
-    meta: 'Platform strategy · Common-platform transformation',
+    title: 'AI-ready regulatory reporting platform',
+    meta: 'Platform strategy · AI-ready foundations',
     context:
       'Fragmented per-report tooling was preventing scale across markets and regulatory regimes during a period of significant regulatory change, including post-Brexit readiness obligations.',
     move:
       'I defined and led the strategic vision for a unified regulatory reporting platform, replacing point tools with a common-platform model and codifying report onboarding into a repeatable lifecycle — usable across markets without rebuilding per-jurisdiction.',
     proves:
-      'Per-report tooling never compounds. Reporting becomes a product the moment you commit to the platform underneath it.',
+      'Per-report tooling never compounds. The platform substrate I built is what the next layer of AI augmentation — intelligent validation, automated narrative generation, agentic review — runs on.',
     metrics: [
       { v: '60+', l: 'Regulatory reports onboarded' },
       { v: '3 markets', l: 'Scaled in 3 months' },
@@ -87,7 +87,7 @@ const WORK = [
     move:
       'I delivered AML and SAR reporting capabilities, online payment processing expansion support in China, and crypto transfer reporting infrastructure in the United States. I operationalized AML/CTF controls and regulatory metric reporting, and contributed to Business Advisory Group and Go/No-Go forums for cross-border launches.',
     proves:
-      'Compliance reporting infrastructure is the fastest path to new markets — when it is treated as product, not paperwork.',
+      'Compliance reporting infrastructure is the fastest path to new markets — and the cleanest foundation for AI-driven risk detection, automated reporting, and intelligent controls on top of it.',
     metrics: [
       { v: '$4B', l: 'Revenue opportunity enabled' },
       { v: 'AML · SAR · Crypto', l: 'Reporting capabilities delivered' },
@@ -96,14 +96,14 @@ const WORK = [
   },
   {
     n: '04',
-    title: 'Risk, privacy, and data governance foundations',
-    meta: 'Customer risk · GDPR · Data substrate',
+    title: 'Data and governance foundations for AI',
+    meta: 'Customer risk · GDPR · The substrate AI runs on',
     context:
       'Customer risk scoring was delayed and privacy enforcement fragmented across international markets, with substantial revenue exposure at stake and a need for governance that could execute, not just exist on paper.',
     move:
       'I built Customer Risk Rating capabilities with a global ramp — enabling risk scoring within 24 hours of onboarding and auto-triggered policy enforcement — and led GDPR and privacy platform strategy for international markets. Earlier hands-on foundations across ETL, BI, governance, lineage, Teradata, Informatica, Tableau, and reporting automation made the rest of this work possible.',
     proves:
-      'Strong data foundations are the precondition for AI-native operating models. Governance executes through them, or it does not execute at all.',
+      'Strong data foundations are the precondition for AI-native operating models. Governance executes through them — or AI does not survive contact with production.',
     metrics: [
       { v: '$10B+', l: 'Revenue exposure protected' },
       { v: '100+', l: 'Privacy rules monitored' },
@@ -115,60 +115,60 @@ const WORK = [
 const JUDGMENT = [
   {
     n: '01',
-    title: 'Automation with accountability',
-    tension: 'Speed and scale versus accountability in regulated workflows.',
+    title: 'AI agents with human accountability',
+    tension: 'Agent speed and scale versus human accountability in regulated workflows.',
     judgment:
-      'Automate the deterministic steps. Design human escalation explicitly for policy-sensitive decisions, rather than discovering it later as a backlog.',
-    why: 'It kept review velocity high without quietly delegating accountability to a model.',
+      'Automate the deterministic agent steps. Design human escalation explicitly for policy-sensitive decisions, rather than discovering it later as a queue.',
+    why: 'It kept agent velocity high without quietly delegating accountability to a model.',
   },
   {
     n: '02',
-    title: 'AI workflows with auditability',
+    title: 'Agentic autonomy with auditability',
     tension: 'LLM flexibility versus regulatory traceability.',
     judgment:
-      'Structured outputs, validation layers, retries, and auditable checkpoints — on every call, not just the demo path.',
-    why: 'It was the difference between a working prototype and a production system regulators could actually inspect.',
+      'Structured outputs, validation layers, retries, and audit checkpoints — on every call, not just the demo path.',
+    why: 'It was the difference between a working prototype and a production AI system regulators could actually inspect.',
   },
   {
     n: '03',
-    title: 'Platforms over fragmented tools',
-    tension: 'Immediate delivery pressure versus long-term scalability.',
+    title: 'AI platforms over AI features',
+    tension: 'Pressure to ship AI features versus the discipline to build AI primitives.',
     judgment:
-      'Resist per-report tooling once the second jurisdiction lands. Build the platform primitives instead, even when it is slower in the first quarter.',
-    why: 'It compressed report onboarding from quarters to weeks and made every later market nearly free.',
+      'Build reusable orchestration, validation, and governance primitives once. AI features compound on platform — they do not compound on each other.',
+    why: 'It is the difference between teams that scale AI in production and teams that ship demos.',
   },
   {
     n: '04',
-    title: 'Market speed with regulatory readiness',
-    tension: 'Business urgency versus jurisdiction-specific compliance obligations.',
+    title: 'AI velocity within regulatory readiness',
+    tension: 'Business urgency to ship AI versus jurisdiction-specific compliance obligations.',
     judgment:
-      'Align platform execution with control readiness — not the other way around. Sequence the launch around what can be governed.',
-    why: 'It avoided the post-launch retrofits that quietly consume engineering capacity for years.',
+      'Sequence the AI rollout around what can be governed — not just around what is technically possible.',
+    why: 'It avoided the post-launch retrofits that quietly consume AI engineering capacity for years.',
   },
   {
     n: '05',
-    title: 'Compliance as business enablement',
-    tension: 'Revenue opportunity versus AML/CTF and reporting obligations.',
+    title: 'Governance as AI enabler',
+    tension: 'Compliance overhead versus AI ambition.',
     judgment:
-      'Treat compliance reporting infrastructure as the market-expansion enabler, not the gating cost. Build it as product.',
-    why: 'It reframed the conversation from cost center to revenue lever, and helped unlock new markets without rebuilding.',
+      'Treat governance, lineage, and controls as the substrate AI products scale on — not friction to route around.',
+    why: 'It reframes compliance from cost center to AI accelerator, and is what makes enterprise AI adoption actually possible.',
   },
   {
     n: '06',
-    title: 'Data foundations before intelligence',
-    tension: 'Traditional reporting execution versus AI-native operating models.',
+    title: 'Data foundations before AI intelligence',
+    tension: 'AI-feature ambition versus data-substrate reality.',
     judgment:
-      'Invest in the data substrate first — lineage, validation, governance — and only then build intelligent systems on top of it.',
-    why: 'Every AI claim that lasted in production sat on a strong data foundation underneath. The ones that did not, did not last.',
+      'Invest in lineage, validation, and governance first; only then build intelligent systems on top.',
+    why: 'Every AI claim that lasted in production sat on a strong data foundation. The ones that did not, did not last.',
   },
 ]
 
 const IMPACT = [
   {
-    group: 'Automation',
+    group: 'AI automation',
     items: [
-      'Reduced manual intervention by 60%',
-      'Improved workflow turnaround by 50%',
+      'Reduced manual intervention by 60% through agentic workflow automation',
+      'Improved workflow turnaround by 50% across multi-jurisdiction operations',
     ],
   },
   {
@@ -187,9 +187,9 @@ const IMPACT = [
     ],
   },
   {
-    group: 'Governance',
+    group: 'AI governance & controls',
     items: [
-      '100+ privacy rules monitored',
+      '100+ privacy rules monitored under auto-triggered policy enforcement',
       'AML, SAR, GDPR, privacy, KYC, crypto reporting, risk, and regulatory reporting capabilities delivered',
     ],
   },
@@ -222,7 +222,7 @@ const LINKS = {
   email: 'gati4dash@gmail.com',
   linkedin: 'https://www.linkedin.com/in/gati-dash',
   resume: '/GatiDash_SF.pdf',
-  photo: '/profile.png', // place your photo at public/profile.png
+  photo: '/profile.jpg', // place your photo at public/profile.jpg
   location: 'Hyderabad, India',
 }
 
@@ -315,18 +315,18 @@ function Profile() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
           {/* Main column */}
           <div className="lg:col-span-8">
-            <p className="eyebrow mb-6">Senior Product Leader · AI, Automation & Strategy</p>
+            <p className="eyebrow mb-6">AI Product Leader · Strategy, Governance & Agentic Systems</p>
 
             <h1 className="display-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.04] max-w-prose-wide">
               I build trusted AI products for complex, regulated enterprise workflows.
             </h1>
 
             <p className="mt-8 text-xl sm:text-2xl text-smoke leading-snug max-w-prose-wide font-serif font-normal">
-              I help enterprise teams turn manual, compliance-heavy operations into scalable platforms that improve speed, accuracy, governance, and business readiness.
+              AI product strategy and agentic workflow development for regulated enterprises — built with the governance and controls high-stakes environments require.
             </p>
 
             <p className="mt-10 text-base sm:text-lg text-ink-soft leading-relaxed max-w-prose-tight">
-              I started in data engineering, moved into regulatory and governance platforms, and now lead AI-native workflow automation in high-stakes enterprise environments. My work sits at the intersection of product strategy, regulated execution, data foundations, and intelligent automation.
+              I lead AI product strategy and the build of agentic systems inside complex, regulated enterprises. My path took me from data engineering through regulatory and governance platforms to AI-native execution — and that range shows up in how I think about AI products: governed by design, anchored in real operations, and built to survive production. I am an alum of the Indian School of Business Senior Digital Leadership Programme.
             </p>
 
             {/* Restrained proof — three short lines with hairline dividers */}
@@ -372,9 +372,14 @@ function Profile() {
                 <div>
                   <dt className="eyebrow mb-1.5">Role</dt>
                   <dd className="text-ink-soft leading-relaxed">
-                    Senior Product Leader<br />
-                    AI, Automation &amp; Strategy<br />
-                    Product Vision &amp; Roadmap
+                    AI Product Leader<br />
+                    Strategy · Governance · Agentic Systems
+                  </dd>
+                </div>
+                <div>
+                  <dt className="eyebrow mb-1.5">Credentials</dt>
+                  <dd className="text-ink-soft leading-relaxed">
+                    ISB — Senior Digital Leadership Programme
                   </dd>
                 </div>
                 <div>
@@ -421,10 +426,10 @@ function WhatIBuild() {
       <Container>
         <SectionLabel n="—">What I build</SectionLabel>
         <h2 className="display-serif mt-6 text-3xl sm:text-4xl lg:text-5xl max-w-3xl leading-[1.1]">
-          Four areas where I do my best work.
+          Four areas of AI product leadership.
         </h2>
         <p className="mt-5 text-lg text-smoke max-w-2xl leading-relaxed">
-          The thread is the same across all of them: turning compliance pressure into platform leverage, without losing the human judgment regulated work requires.
+          The thread is the same across all of them: AI products that earn trust in regulated environments — through governance, controls, and the operating discipline production demands.
         </p>
 
         <div className="mt-16 grid md:grid-cols-2 gap-y-12 gap-x-16">
@@ -456,7 +461,7 @@ function SelectedWork() {
           Selected work.
         </h2>
         <p className="mt-5 text-lg text-smoke max-w-2xl leading-relaxed">
-          Four product stories from regulated, multi-jurisdiction enterprise environments. Sanitized of proprietary detail; the operating shifts are real.
+          Four AI-product stories from regulated, multi-jurisdiction enterprise environments — each one a study in shipping AI under governance and control. Sanitized of proprietary detail; the operating shifts are real.
         </p>
 
         <div className="mt-20 space-y-24">
@@ -525,7 +530,7 @@ function Judgment() {
           Product judgment under constraint.
         </h2>
         <p className="mt-5 text-lg text-smoke max-w-2xl leading-relaxed">
-          The most important product decisions in regulated environments are rarely about features. They are about where to standardize, where to preserve human judgment, how to manage risk, and how to build systems that can scale without losing control.
+          The most important AI product decisions in regulated environments are rarely about model choice. They are about where to standardize, where to preserve human judgment, how to manage risk, and how to build AI systems that scale without losing control.
         </p>
 
         <div className="mt-20 max-w-prose-wide divide-y divide-sand">

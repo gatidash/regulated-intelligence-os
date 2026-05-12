@@ -7,43 +7,33 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        serif: ['Fraunces', 'Georgia', 'ui-serif', 'serif'],
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       colors: {
+        paper: {
+          DEFAULT: '#FAF8F4',
+          dark: '#F2EDE5',
+        },
         ink: {
-          950: '#02040a',
-          900: '#060a14',
-          800: '#0b1322',
-          700: '#111c33',
+          DEFAULT: '#181818',
+          soft: '#2A2722',
         },
-        slate925: '#0a1120',
-        cyanos: {
-          400: '#22d3ee',
-          500: '#06b6d4',
-        },
-        trust: {
-          400: '#34d399',
-          500: '#10b981',
+        smoke: '#5A5550',
+        dust: '#8B857E',
+        sand: '#E5DFD5',
+        accent: {
+          DEFAULT: '#1F3A5F',
+          soft: '#2E5380',
         },
       },
-      boxShadow: {
-        'glow-cyan': '0 0 0 1px rgba(34,211,238,0.25), 0 20px 60px -20px rgba(34,211,238,0.35)',
-        'panel': '0 1px 0 rgba(255,255,255,0.04) inset, 0 30px 80px -40px rgba(0,0,0,0.8)',
+      letterSpacing: {
+        'editorial': '-0.018em',
+        'wide-caps': '0.16em',
       },
-      backgroundImage: {
-        'grid-faint': "linear-gradient(rgba(148,163,184,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.06) 1px, transparent 1px)",
-        'radial-cyan': "radial-gradient(60% 50% at 50% 0%, rgba(34,211,238,0.18) 0%, rgba(2,4,10,0) 60%)",
-      },
-      animation: {
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'scan': 'scan 8s linear infinite',
-      },
-      keyframes: {
-        scan: {
-          '0%': { transform: 'translateY(-100%)' },
-          '100%': { transform: 'translateY(100%)' },
-        },
+      maxWidth: {
+        'prose-tight': '38rem',
+        'prose-wide': '52rem',
       },
     },
   },

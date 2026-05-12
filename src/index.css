@@ -23,7 +23,7 @@ body {
 /* Editorial typography utilities */
 @layer components {
   .display-serif {
-    @apply font-serif font-medium tracking-editorial text-ink;
+    @apply font-serif font-medium tracking-tight text-ink;
   }
   .eyebrow {
     @apply font-sans text-[11px] sm:text-xs uppercase tracking-wide-caps text-dust font-medium;

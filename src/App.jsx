@@ -313,7 +313,7 @@ const LINKS = {
   email: 'gati4dash@gmail.com',
   linkedin: 'https://www.linkedin.com/in/gati-dash',
   resume: '/GatiDash_SF.pdf',
-  photo: '/profile.jpg', // place your photo at public/profile.jpg
+  photo: '/profile.png', // place your photo at public/profile.png
   location: 'Hyderabad, India',
 }
 

@@ -7,107 +7,92 @@ import { ArrowUpRight, Mail, Linkedin, MapPin } from 'lucide-react'
 
 const NAV = [
   { id: 'profile', label: 'Profile' },
-  { id: 'capabilities', label: 'Capabilities' },
   { id: 'work', label: 'Work' },
-  { id: 'toolkit', label: 'Toolkit' },
+  { id: 'capabilities', label: 'Capabilities' },
   { id: 'judgment', label: 'Judgment' },
+  { id: 'toolkit', label: 'Toolkit' },
+  { id: 'career', label: 'Career' },
   { id: 'contact', label: 'Contact' },
 ]
 
 const PROOF_LINES = [
-  'Indian School of Business — Senior Digital Leadership Programme alum.',
-  '15+ years across AI products, agentic workflows, regulatory platforms, and the data foundations they run on.',
-  'Led AI-enabled automation that reduced manual intervention by 60% and improved workflow turnaround by 50% across multi-jurisdiction operations.',
+  '15 years across data, regulatory platforms, and (since 2024) production AI work — at PayPal.',
+  'Most recent: led AI automation across compliance ops in 5 jurisdictions. Cut manual review by 60%, halved turnaround. Numbers held for two quarters past launch.',
+  'Earlier: scaled a single regulatory-reporting platform from 0 to 60+ reports, 3 markets onboarded in a quarter.',
 ]
 
 const PILLARS = [
   {
     n: '01',
-    title: 'AI Product Strategy & Vision',
-    body: 'Defining the AI roadmap, build-versus-buy, and operating model for enterprises moving from AI pilots to production-grade products with measurable adoption.',
+    title: 'AI product strategy',
+    body: 'I run the AI roadmap conversation that decides what gets built, what gets bought, and what gets killed. Most of my time is spent talking teams out of features that demo well and ship poorly.',
   },
   {
     n: '02',
-    title: 'Agentic Workflows & Intelligent Automation',
-    body: 'Building LLM-agent systems with orchestration, validation, structured outputs, retries, and human-in-the-loop — designed for the audit and accountability regulated work requires.',
+    title: 'Agentic workflows in regulated ops',
+    body: 'Multi-step LLM systems with structured outputs, validation, retries, and a human override path. I treat the override path as part of the product, not as a ticket queue that grows after launch.',
   },
   {
     n: '03',
-    title: 'AI Governance & Controls',
-    body: 'The control plane that makes enterprise AI trustworthy: traceability, policy enforcement, explainability, intentional human review, and operational readiness from day one.',
+    title: 'AI governance and controls',
+    body: 'Lineage, policy enforcement, traceability, evals. The unglamorous controls that decide whether the AI feature still exists in month six.',
   },
   {
     n: '04',
-    title: 'Data Foundations for AI',
-    body: 'Bringing deep data engineering, governance, lineage, and reporting depth directly into AI product execution. The substrate determines whether AI claims survive production.',
+    title: 'The data layer underneath',
+    body: 'I came up in data engineering, so I am suspicious of AI roadmaps that skip lineage and validation work. That layer is usually what kills the demo in production.',
   },
 ]
 
 const WORK = [
   {
     n: '01',
-    title: 'Agentic AI workflows for regulated operations',
-    meta: 'Agentic AI · LLM Orchestration · Multi-jurisdiction',
+    title: 'Agentic AI for compliance review at PayPal',
+    meta: 'LLM agents · 5 jurisdictions · 2023–2025',
     context:
-      'Manual review queues and policy-interpretation steps were bottlenecking throughput across compliance operations spanning multiple jurisdictions, with no acceptable path to add headcount.',
+      'Compliance review queues across 5 jurisdictions were running 4+ days behind. The business wanted to add headcount; the regulator wanted faster turnaround. The team was caught between both.',
     move:
-      'I led the build of AI-driven workflow automation — combining LLM agents, orchestration patterns, structured outputs, validation layers, retry logic, and explicit human-in-the-loop overrides. The design treated auditability as a first-class requirement, not a downstream concern.',
+      'We replaced the manual triage step with LLM agents that did the structured extraction and first-pass policy mapping, then routed everything policy-sensitive to a human reviewer with the agent’s reasoning attached. Every agent call went through schema validation before it touched the queue. We shipped in shadow mode for six weeks before any decision was acted on.',
     proves:
-      'Agentic AI is shippable inside regulated environments — when the execution layer is designed for auditability before it is optimized for speed.',
+      'The hard part was not the agents. It was wiring every agent call through a validator and a human override path before the first one shipped, not after the first incident.',
     metrics: [
-      { v: '60%', l: 'Reduction in manual intervention' },
-      { v: '50%', l: 'Faster processing turnaround' },
-      { v: '5', l: 'Jurisdictions integrated' },
-      { v: 'Production-grade', l: 'Audit and human-in-the-loop design' },
+      { v: '60%', l: 'Reduction in manual review volume' },
+      { v: '2 days → 8 hrs', l: 'Median case turnaround' },
+      { v: '5', l: 'Jurisdictions live' },
+      { v: '6 weeks', l: 'Shadow mode before go-live' },
     ],
   },
   {
     n: '02',
-    title: 'AI-ready regulatory reporting platform',
-    meta: 'Platform strategy · AI-ready foundations',
+    title: 'One regulatory reporting platform instead of sixty',
+    meta: 'Platform consolidation · 2020–2023',
     context:
-      'Fragmented per-report tooling was preventing scale across markets and regulatory regimes during a period of significant regulatory change, including post-Brexit readiness obligations.',
+      'We were building one tool per regulator. Each report took roughly a quarter to onboard, and the team was spending more time maintaining than shipping. Brexit and a handful of new mandates were about to make the maintenance load worse.',
     move:
-      'I defined and led the strategic vision for a unified regulatory reporting platform, replacing point tools with a common-platform model and codifying report onboarding into a repeatable lifecycle — usable across markets without rebuilding per-jurisdiction.',
+      'I led the case for a single platform with a common report-onboarding lifecycle. The hard work was not the engineering. It was talking three product groups and two ops teams into giving up their per-jurisdiction tooling. We shipped the platform in 14 months and onboarded 60+ reports onto it over the following two years.',
     proves:
-      'Per-report tooling never compounds. The platform substrate I built is what the next layer of AI augmentation — intelligent validation, automated narrative generation, agentic review — runs on.',
+      'New reports went from a quarter to about two weeks. More importantly, the platform is now where the AI augmentation plugs in cleanly — validation, narrative generation, agent-assisted review — instead of needing one integration per legacy tool.',
     metrics: [
-      { v: '60+', l: 'Regulatory reports onboarded' },
-      { v: '3 markets', l: 'Scaled in 3 months' },
-      { v: '80%', l: 'Reduction in reporting turnaround' },
-      { v: '60%+', l: 'Operational efficiency gain' },
+      { v: '60+', l: 'Reports onboarded' },
+      { v: '3 markets', l: 'Live in 3 months once platform was up' },
+      { v: '80%', l: 'Reduction in per-report onboarding time' },
+      { v: '14 months', l: 'Platform build to v1' },
     ],
   },
   {
     n: '03',
-    title: 'Compliance infrastructure for market expansion',
-    meta: 'AML / SAR / Crypto reporting · Cross-border',
+    title: 'Compliance reporting as a go-to-market unlock',
+    meta: 'AML · SAR · Crypto reporting · 2018–2021',
     context:
-      'Revenue ambition into new geographies was blocked by missing AML/CTF and jurisdiction-specific reporting infrastructure. Compliance was being scoped as a gating cost rather than as a market enabler.',
+      'Two new markets — China payments and US crypto — were blocked on missing AML and jurisdiction-specific reporting infrastructure. The business was treating compliance as a launch tax. The launches kept slipping.',
     move:
-      'I delivered AML and SAR reporting capabilities, online payment processing expansion support in China, and crypto transfer reporting infrastructure in the United States. I operationalized AML/CTF controls and regulatory metric reporting, and contributed to Business Advisory Group and Go/No-Go forums for cross-border launches.',
+      'I delivered the AML and SAR reporting capabilities, the online-payments expansion support in China, and the crypto-transfer reporting infrastructure in the US. I also sat on the Go/No-Go forums for both launches and rewrote how compliance scope was estimated up-front, so future launches did not slip on the same surprises.',
     proves:
-      'Compliance reporting infrastructure is the fastest path to new markets — and the cleanest foundation for AI-driven risk detection, automated reporting, and intelligent controls on top of it.',
+      'Compliance reporting infrastructure is not a launch tax. It is the cleanest path into a new market, and now the cleanest foundation for AI-driven risk detection on top of it.',
     metrics: [
-      { v: '$4B', l: 'Revenue opportunity enabled' },
-      { v: 'AML · SAR · Crypto', l: 'Reporting capabilities delivered' },
-      { v: 'Go/No-Go', l: 'Cross-border launch forums' },
-    ],
-  },
-  {
-    n: '04',
-    title: 'Data and governance foundations for AI',
-    meta: 'Customer risk · GDPR · The substrate AI runs on',
-    context:
-      'Customer risk scoring was delayed and privacy enforcement fragmented across international markets, with substantial revenue exposure at stake and a need for governance that could execute, not just exist on paper.',
-    move:
-      'I built Customer Risk Rating capabilities with a global ramp — enabling risk scoring within 24 hours of onboarding and auto-triggered policy enforcement — and led GDPR and privacy platform strategy for international markets. Earlier hands-on foundations across ETL, BI, governance, lineage, Teradata, Informatica, Tableau, and reporting automation made the rest of this work possible.',
-    proves:
-      'Strong data foundations are the precondition for AI-native operating models. Governance executes through them — or AI does not survive contact with production.',
-    metrics: [
-      { v: '$10B+', l: 'Revenue exposure protected' },
-      { v: '100+', l: 'Privacy rules monitored' },
-      { v: '24 hr', l: 'Risk scoring at onboarding' },
+      { v: '~$4B', l: 'Revenue opportunity unlocked across two markets' },
+      { v: 'AML · SAR · Crypto', l: 'Capabilities shipped' },
+      { v: '2 launches', l: 'Off the slip list' },
     ],
   },
 ]
@@ -115,120 +100,51 @@ const WORK = [
 const JUDGMENT = [
   {
     n: '01',
-    title: 'AI agents with human accountability',
-    tension: 'Agent speed and scale versus human accountability in regulated workflows.',
+    title: 'When to let an agent decide, and when not to',
+    tension: 'Agent throughput vs. accountability on policy-sensitive calls.',
     judgment:
-      'Automate the deterministic agent steps. Design human escalation explicitly for policy-sensitive decisions, rather than discovering it later as a queue.',
-    why: 'It kept agent velocity high without quietly delegating accountability to a model.',
+      'Automate the deterministic steps. For anything policy-sensitive, escalation is a designed product surface, not a backlog item.',
+    why: 'It kept agent speed high without quietly handing accountability to the model.',
   },
   {
     n: '02',
-    title: 'Agentic autonomy with auditability',
-    tension: 'LLM flexibility versus regulatory traceability.',
+    title: 'Structured output is non-negotiable',
+    tension: 'LLM flexibility vs. inspectability.',
     judgment:
-      'Structured outputs, validation layers, retries, and audit checkpoints — on every call, not just the demo path.',
-    why: 'It was the difference between a working prototype and a production AI system regulators could actually inspect.',
+      'Every agent call emits a JSON-schema-valid object. Validation runs before the result touches downstream code. Retries are bounded.',
+    why: 'It is the difference between a prototype the team can demo and a system the regulator can inspect.',
   },
   {
     n: '03',
-    title: 'AI platforms over AI features',
-    tension: 'Pressure to ship AI features versus the discipline to build AI primitives.',
+    title: 'Build the AI platform before the third AI feature',
+    tension: 'Pressure to ship the next AI feature vs. discipline to build shared infrastructure.',
     judgment:
-      'Build reusable orchestration, validation, and governance primitives once. AI features compound on platform — they do not compound on each other.',
-    why: 'It is the difference between teams that scale AI in production and teams that ship demos.',
+      'Invest in shared orchestration and eval infrastructure before the third feature. Otherwise you end up with three prompt-handling stacks and nobody who can debug any of them.',
+    why: 'The teams that scale AI in production are the ones that did this once. The teams that ship demos are the ones that did not.',
   },
   {
     n: '04',
-    title: 'AI velocity within regulatory readiness',
-    tension: 'Business urgency to ship AI versus jurisdiction-specific compliance obligations.',
+    title: 'Sequence around what can be governed',
+    tension: 'Business urgency to ship AI vs. jurisdiction-specific compliance work.',
     judgment:
-      'Sequence the AI rollout around what can be governed — not just around what is technically possible.',
-    why: 'It avoided the post-launch retrofits that quietly consume AI engineering capacity for years.',
+      'Roll AI out in markets where the governance work is already done, not in the markets where it would be the hardest to retrofit.',
+    why: 'It avoids the post-launch retrofits that quietly consume the AI engineering budget for years.',
   },
   {
     n: '05',
-    title: 'Governance as AI enabler',
-    tension: 'Compliance overhead versus AI ambition.',
+    title: 'Governance is not friction',
+    tension: 'Treating compliance as a brake on AI ambition.',
     judgment:
-      'Treat governance, lineage, and controls as the substrate AI products scale on — not friction to route around.',
-    why: 'It reframes compliance from cost center to AI accelerator, and is what makes enterprise AI adoption actually possible.',
+      'Lineage, evals, and override paths are part of the product. Built once, they are how the next AI feature ships faster, not slower.',
+    why: 'I have watched the same governance investment cost six months on the first feature and save twelve on the third.',
   },
   {
     n: '06',
-    title: 'Data foundations before AI intelligence',
-    tension: 'AI-feature ambition versus data-substrate reality.',
+    title: 'Boring data work first',
+    tension: 'AI roadmap ambition vs. messy underlying data.',
     judgment:
-      'Invest in lineage, validation, and governance first; only then build intelligent systems on top.',
-    why: 'Every AI claim that lasted in production sat on a strong data foundation. The ones that did not, did not last.',
-  },
-]
-
-const IMPACT = [
-  {
-    group: 'AI automation',
-    items: [
-      'Reduced manual intervention by 60% through agentic workflow automation',
-      'Improved workflow turnaround by 50% across multi-jurisdiction operations',
-    ],
-  },
-  {
-    group: 'Platform scale',
-    items: [
-      '60+ regulatory reports onboarded',
-      '3 markets scaled in 3 months',
-      '80% reduction in reporting turnaround',
-    ],
-  },
-  {
-    group: 'Business enablement',
-    items: [
-      '$4B revenue opportunity enabled',
-      '$10B+ revenue exposure protected',
-    ],
-  },
-  {
-    group: 'AI governance & controls',
-    items: [
-      '100+ privacy rules monitored under auto-triggered policy enforcement',
-      'AML, SAR, GDPR, privacy, KYC, crypto reporting, risk, and regulatory reporting capabilities delivered',
-    ],
-  },
-  {
-    group: 'Data foundations',
-    items: [
-      '30% OpEx savings through platform automation',
-      '30% improvement in data governance and lineage',
-      '20% ETL runtime improvement',
-      '20% reduction in validation errors',
-    ],
-  },
-]
-
-// EDIT TITLES AND DESCRIPTIONS TO MATCH YOUR ACTUAL CLAUDE SKILLS / BUILDS
-const AGENTIC_BUILDS = [
-  {
-    n: '01',
-    title: 'Regulatory research & synthesis agent',
-    role: 'Claude skill · Multi-step orchestration',
-    body: 'An agentic skill that takes a research prompt, runs structured multi-source retrieval, validates citations, and returns audit-ready synthesis with sources preserved. Built with the same structured-output and validation patterns I apply to enterprise agentic systems.',
-    outcome: '~80% time compression on research-heavy workflows.',
-    pattern: 'Structured output · Citation validation · Reusable across regulatory topics',
-  },
-  {
-    n: '02',
-    title: 'Document analysis & policy-aware drafting',
-    role: 'Agentic workflow · Human-in-the-loop',
-    body: 'An end-to-end workflow that ingests dense regulatory or product documents, extracts structured insights, and generates policy-aware drafts with explicit human review checkpoints before any artifact is finalized.',
-    outcome: 'Repeatable, traceable drafting at a fraction of manual time.',
-    pattern: 'Extraction agent → policy gate → drafting agent → human review',
-  },
-  {
-    n: '03',
-    title: 'Operator-grade skills library',
-    role: 'Claude skills suite · Governance by default',
-    body: 'A growing library of agentic skills built for high-volume professional workflows — each one designed with the same governance scaffolding I bring to enterprise platforms: structured outputs, validation, audit logging, and intentional human override paths.',
-    outcome: 'Daily operating leverage. Production patterns reusable at enterprise scale.',
-    pattern: 'Skill-first design · Composable agents · Governance by default',
+      'Fix lineage, validation, and ownership of the data first. Then build the AI on top. The reverse order has cost me more product wins than any model choice ever has.',
+    why: 'Every AI feature that lasted in production sat on clean data work. The ones that did not, did not last.',
   },
 ]
 
@@ -236,60 +152,59 @@ const CAPABILITIES = [
   {
     group: 'AI strategy',
     items: [
-      'AI product vision & roadmap',
-      'Build-versus-buy decisions',
-      'Pilot-to-production strategy',
-      'Investment prioritization',
+      'AI roadmap and prioritization',
+      'Build vs. buy vs. partner decisions',
+      'Pilot-to-production transition',
+      'Vendor selection (model + tooling)',
     ],
   },
   {
     group: 'Execution',
     items: [
-      'Agentic system architecture',
-      'LLM orchestration patterns',
-      'Validation & audit design',
-      'Platform engineering judgment',
+      'Agentic system design',
+      'Eval design and benchmarking',
+      'Schema-bound output / validation',
+      'Platform vs. feature trade-off calls',
     ],
   },
   {
     group: 'Governance & risk',
     items: [
-      'AI governance architecture',
-      'Regulatory strategy & readiness',
-      'Policy enforcement design',
+      'AI risk frameworks (in-house and external)',
+      'Regulator-facing design choices',
       'Human-in-the-loop UX',
+      'Data lineage and traceability',
     ],
   },
   {
     group: 'Leadership',
     items: [
-      'Cross-functional alignment',
-      'Executive & board communication',
-      'Stakeholder & regulator engagement',
-      'Team scaling & coaching',
+      'Cross-functional alignment with risk/legal/compliance',
+      'Board and executive communication',
+      'Regulator engagement (specific examples on request)',
+      'Hiring and growing senior PMs',
     ],
   },
 ]
 
-// EDIT YEAR RANGES TO MATCH YOUR CAREER
 const CAREER_ARC = [
   {
     era: '01',
-    years: 'Early career',
-    title: 'Foundations in data',
-    body: 'Data engineering, ETL, BI, and reporting automation across Teradata, Informatica, and Tableau. Data validation, governance, lineage. The hands-on substrate that everything later sits on.',
+    years: '2009–2014',
+    title: 'Data engineering and BI',
+    body: 'Teradata, Informatica, Tableau. ETL pipelines, BI reporting, lineage and governance work at Wipro and Cognizant for Lloyds and Barclays Bank. The hands-on work that everything later sits on.',
   },
   {
     era: '02',
-    years: 'Mid career',
-    title: 'Regulated platforms',
-    body: 'Regulatory reporting platforms across markets. AML, SAR, GDPR, privacy, KYC, customer risk. Compliance-led market expansion and cross-border launches. The shift from individual data work to platform product leadership.',
+    years: '2014–2022',
+    title: 'Compliance, Privacy & Regulatory platforms',
+    body: 'Compliance, Privacy and regulatory reporting platforms at PayPal. AML, SAR, GDPR, KYC, customer risk. Cross-border launch work into China and the US. The shift from individual data work into platform product leadership.',
   },
   {
     era: '03',
-    years: 'Now',
-    title: 'AI-native execution',
-    body: 'AI product strategy and the build of agentic workflows inside regulated enterprises. LLM orchestration, validation, governance architecture, human-in-the-loop design. Everything earlier compounds into AI products built for production.',
+    years: '2022–present',
+    title: 'AI and agentic systems',
+    body: 'Currently leading AI product work at PayPal, focused on turning the regulatory and compliance workflows I used to platform-ify into agent-driven systems. The earlier data and platform years are what make that transition possible.',
   },
 ]
 
@@ -300,48 +215,42 @@ const GOVERNANCE_TOOLKIT = [
       { title: 'Structured outputs', body: 'JSON-schema-bound generation so agents emit machine-verifiable artifacts.' },
       { title: 'Validation pipelines', body: 'Schema, semantic, and policy gates before any downstream action.' },
       { title: 'Retry & backoff logic', body: 'Bounded retries for transient failures and degraded model output.' },
-      { title: 'Fail-safe handling', body: 'Graceful degradation paths that fail safe — never silently — under load or anomaly.' },
+      { title: 'Fail-safe handling', body: 'Graceful degradation paths that fail safe under load or anomaly, rather than failing silently.' },
     ],
   },
   {
     group: 'Audit & trust',
     items: [
-      { title: 'End-to-end traceability', body: 'Continuous record from input through decision to regulatory artifact.' },
+      { title: 'End-to-end traceability', body: 'Every decision is reproducible from input through model output to the final artifact.' },
       { title: 'Decision rationale capture', body: 'Agent reasoning preserved so reviewers and regulators can follow the logic.' },
-      { title: 'Audit-grade artifacts', body: 'Outputs designed to be inspected, not just generated.' },
+      { title: 'Audit-ready artifacts', body: 'Outputs designed to be inspected, not just generated.' },
       { title: 'Explainability surfaces', body: 'Per-decision context exposed where review, dispute, or escalation happen.' },
     ],
   },
   {
     group: 'Operational safety',
     items: [
-      { title: 'Human-in-the-loop thresholds', body: 'Explicit escalation gates on policy-sensitive paths — not afterthought queues.' },
+      { title: 'Human-in-the-loop thresholds', body: 'Escalation criteria defined per workflow and built into the agent loop, not bolted on once the queue starts overflowing.' },
       { title: 'Circuit breakers', body: 'Automated stop conditions when agent behavior drifts from operating intent.' },
       { title: 'Reversibility', body: 'Agent actions designed to be undone or compensated where consequences require it.' },
-      { title: 'Shadow mode & evaluations', body: 'Observe before act. Offline and online evals tied to the metrics that actually matter.' },
+      { title: 'Shadow mode and evaluations', body: 'Run the agent alongside production for weeks before any decision is acted on. Online evals tied to the operating metric that triggered the project.' },
     ],
   },
 ]
 
 const POV_IDEAS = [
-  'Enterprise AI earns trust through reliability, traceability, and adoption — not benchmarks.',
-  'In regulated workflows, governance is not a blocker. It is part of the product.',
-  'Human review should be designed intentionally, not added as an afterthought ticket queue.',
-  'LLM-based systems need structured outputs, validation, failure handling, and clear operating boundaries.',
-  'The most valuable AI products improve operating discipline, not just productivity.',
-]
-
-const ARTICLES = [
-  { title: 'Building AI products in regulated environments', status: 'Forthcoming' },
-  { title: 'Human-in-the-loop is a product design choice', status: 'Forthcoming' },
-  { title: 'From reporting platforms to intelligent workflow systems', status: 'Forthcoming' },
+  'Reliability and traceability earn enterprise trust. Benchmarks do not.',
+  'In regulated work, governance is part of the product spec, not a launch-gate afterthought.',
+  'Human review is a designed surface. If you discover it after launch as a queue, you designed it wrong.',
+  'LLM systems need schema validation, retries, and failure paths from the first call, not the first incident.',
+  'The most valuable AI products improve operating discipline. Productivity gains follow.',
 ]
 
 const LINKS = {
   email: 'gati4dash@gmail.com',
   linkedin: 'https://www.linkedin.com/in/gati-dash',
-  resume: '/GatiDash_SF.pdf',
-  photo: '/profile.png', // place your photo at public/profile.png
+  resume: '/GatiDash_SF.pdf', // rename file in /public to Gatikrishna_Dash_Resume.pdf and update this path
+  photo: '/profile.png',
   location: 'Hyderabad, India',
 }
 
@@ -437,7 +346,7 @@ function Profile() {
   return (
     <section id="profile" className="relative pt-36 pb-28 sm:pt-44 sm:pb-36 lg:pt-52">
       <Container>
-        {/* Mobile-only identity strip — photo lands above the fold */}
+        {/* Mobile-only identity strip */}
         <div className="lg:hidden flex items-center gap-5 mb-10">
           <Avatar src={LINKS.photo} alt="Portrait of Gatikrishna Dash" size="small" />
           <div className="min-w-0">
@@ -452,22 +361,22 @@ function Profile() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
           {/* Main column */}
           <div className="lg:col-span-8">
-            <p className="eyebrow mb-6">AI Product & Transformation Leader · Strategy · Governance · Agentic Systems</p>
+            <p className="eyebrow mb-6">AI &amp; Platform Product Leader  ·  Regulated industries</p>
             <p className="inline-flex items-center gap-2 text-sm text-accent mb-7">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              Available for senior AI product leadership roles
+              Currently open to Head of Product / VP roles in regulated AI
             </p>
 
             <h1 className="display-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.04] max-w-prose-wide">
-              I build trusted AI products for complex, regulated enterprise workflows.
+              I lead AI and platform product work in PayPal. The kind that has to clear an audit, not just a demo.
             </h1>
 
             <p className="mt-8 text-xl sm:text-2xl text-smoke leading-snug max-w-prose-wide font-serif font-normal">
-              AI product strategy and agentic workflow development for regulated enterprises — built with the governance and controls high-stakes environments require.
+              Most of the last decade was compliance, risk, and regulatory reporting platforms. Most of the next is the AI-native versions of the same systems.
             </p>
 
             <p className="mt-10 text-base sm:text-lg text-ink-soft leading-relaxed max-w-prose-tight">
-              I lead AI product strategy and the transformation of manual, compliance-heavy workflows into governed agentic systems. My path went from data engineering through regulatory and governance platforms to AI-native execution — and that range shows up in how I think about AI products: governed by design, anchored in real operations, and built to survive production. I am an alum of the Indian School of Business Senior Digital Leadership Programme — and I build the agentic systems I lead. Same patterns, same governance, every day in my own workflows.
+              I started in data engineering — ETL, lineage, BI — and spent the middle of my career on regulatory-reporting and AML platforms at PayPal. The AI work is the third act, and the through-line is the same: shipping systems that have to be audited, not just admired. ISB Senior Digital Leadership Programme alum; Post Graduate Certification in Product Management from Kellogg School of Management; B-Tech in Computer Science &amp; Engineering from ITER.
             </p>
 
             {/* Restrained proof — three short lines with hairline dividers */}
@@ -484,8 +393,8 @@ function Profile() {
 
             {/* CTAs */}
             <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
-              <a href="#work" className="btn-quiet font-medium">
-                View selected work
+              <a href={`mailto:${LINKS.email}`} className="btn-quiet font-medium">
+                Start a conversation
               </a>
               <a href={LINKS.resume} download className="btn-quiet font-medium">
                 Download résumé
@@ -501,7 +410,7 @@ function Profile() {
             </div>
           </div>
 
-          {/* Right-aligned profile card — desktop only; mobile uses the identity strip above */}
+          {/* Right-aligned profile card */}
           <aside className="hidden lg:block lg:col-span-4 lg:pl-8 lg:border-l border-sand">
             <div className="lg:sticky lg:top-28">
               <Avatar src={LINKS.photo} alt="Portrait of Gatikrishna Dash" />
@@ -513,14 +422,16 @@ function Profile() {
                 <div>
                   <dt className="eyebrow mb-1.5">Role</dt>
                   <dd className="text-ink-soft leading-relaxed">
-                    AI Product &amp; Transformation Leader<br />
-                    Strategy · Governance · Agentic Systems
+                    AI &amp; Platform Product Leader<br />
+                    Regulated industries · PayPal
                   </dd>
                 </div>
                 <div>
                   <dt className="eyebrow mb-1.5">Credentials</dt>
                   <dd className="text-ink-soft leading-relaxed">
-                    ISB — Senior Digital Leadership Programme
+                    ISB · Senior Digital Leadership Programme<br />
+                    Kellogg · PG Cert, Product Management<br />
+                    ITER · B-Tech, Computer Science &amp; Engineering
                   </dd>
                 </div>
                 <div>
@@ -561,48 +472,16 @@ function Profile() {
   )
 }
 
-function WhatIBuild() {
-  return (
-    <section id="what" className="py-24 sm:py-32 border-t border-sand">
-      <Container>
-        <SectionLabel n="—">What I build</SectionLabel>
-        <h2 className="display-serif mt-6 text-3xl sm:text-4xl lg:text-5xl max-w-3xl leading-[1.1]">
-          Four areas of AI product leadership.
-        </h2>
-        <p className="mt-5 text-lg text-smoke max-w-2xl leading-relaxed">
-          The thread is the same across all of them: AI products that earn trust in regulated environments — through governance, controls, and the operating discipline production demands.
-        </p>
-
-        <div className="mt-16 grid md:grid-cols-2 gap-y-12 gap-x-16">
-          {PILLARS.map((p) => (
-            <div key={p.n} className="border-t border-sand pt-6">
-              <div className="flex items-baseline gap-4">
-                <span className="font-serif text-sm text-accent">{p.n}</span>
-                <h3 className="font-serif text-xl sm:text-2xl text-ink tracking-editorial">
-                  {p.title}
-                </h3>
-              </div>
-              <p className="mt-4 text-base text-ink-soft leading-relaxed max-w-md">
-                {p.body}
-              </p>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </section>
-  )
-}
-
 function SelectedWork() {
   return (
     <section id="work" className="py-24 sm:py-32 border-t border-sand">
       <Container>
         <SectionLabel n="01">Work</SectionLabel>
         <h2 className="display-serif mt-6 text-3xl sm:text-4xl lg:text-5xl max-w-3xl leading-[1.1]">
-          Selected work.
+          Three pieces of work that explain how I think.
         </h2>
         <p className="mt-5 text-lg text-smoke max-w-2xl leading-relaxed">
-          Same agentic patterns, applied at enterprise scale. Four AI-product stories from regulated, multi-jurisdiction environments — each one a study in shipping AI under governance and control. Sanitized of proprietary detail; the operating shifts are real.
+          Anonymized where it has to be. The numbers are not. Each case names what shipped, what it took, and what I would tell the next team trying the same thing.
         </p>
 
         <div className="mt-20 space-y-24">
@@ -624,13 +503,13 @@ function SelectedWork() {
 
                 <div className="mt-8 space-y-6 max-w-prose-wide">
                   <Paragraph label="Context" body={w.context} />
-                  <Paragraph label="Product move" body={w.move} />
+                  <Paragraph label="What I did" body={w.move} />
                   {i === 0 && <AgenticDiagram />}
-                  <Paragraph label="What it proves" body={w.proves} accent />
+                  <Paragraph label="What I would tell the next team" body={w.proves} accent />
                 </div>
               </div>
 
-              {/* Right — metrics column */}
+              {/* Right — metrics */}
               <aside className="lg:col-span-4 lg:pl-8 lg:border-l border-sand">
                 <div className="eyebrow mb-6">Operating impact</div>
                 <dl className="divide-y divide-sand">
@@ -663,52 +542,47 @@ function Paragraph({ label, body, accent = false }) {
   )
 }
 
-function AgenticBuilds() {
+function AgenticDiagram() {
+  const stages = [
+    { label: 'Case intake', sub: 'Regulatory case in' },
+    { label: 'Extraction', sub: 'LLM agent' },
+    { label: 'Policy mapping', sub: 'LLM + tools' },
+    { label: 'Schema validation', sub: 'Gate' },
+    { label: 'Human review', sub: 'Policy-sensitive' },
+  ]
   return (
-    <section id="builds" className="py-24 sm:py-32 border-t border-sand">
-      <Container>
-        <SectionLabel n="—">Agentic builds</SectionLabel>
-        <h2 className="display-serif mt-6 text-3xl sm:text-4xl lg:text-5xl max-w-3xl leading-[1.1]">
-          The systems I build to keep operator instincts sharp.
-        </h2>
-        <p className="mt-5 text-lg text-smoke max-w-3xl leading-relaxed">
-          Strategy is only as credible as execution. These are production-grade agentic workflows I&apos;ve designed and run end-to-end using Claude — built with the same governance and orchestration patterns I bring to enterprise transformation work. They are how I keep the craft beneath the strategy sharp.
-        </p>
+    <figure className="my-16 max-w-prose-wide" aria-label="Agentic workflow for PayPal compliance review with human review gate and continuous audit trail">
+      <figcaption className="eyebrow mb-5">The architecture we shipped (Case 1, anonymized)</figcaption>
 
-        <ol className="mt-16 divide-y divide-sand">
-          {AGENTIC_BUILDS.map((b) => (
-            <li key={b.n} className="grid lg:grid-cols-12 gap-y-6 gap-x-12 py-10 first:pt-0">
-              <div className="lg:col-span-3">
-                <div className="font-serif text-3xl text-accent leading-none">{b.n}</div>
-                <div className="eyebrow mt-3">{b.role}</div>
+      <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 sm:gap-2 items-stretch">
+        {stages.map((s, i) => (
+          <div key={s.label} className="relative">
+            <div className="border border-sand bg-paper rounded-md px-3 py-4 h-full flex flex-col justify-center">
+              <div className="font-serif text-base text-ink leading-tight">{s.label}</div>
+              <div className="text-[11px] text-dust mt-1 tracking-wide">{s.sub}</div>
+            </div>
+            {i < stages.length - 1 && (
+              <div className="hidden sm:flex absolute top-1/2 -right-1.5 -translate-y-1/2 z-10 text-accent">
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M0 5h10M6 1l5 4-5 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </div>
-              <div className="lg:col-span-9">
-                <h3 className="font-serif text-2xl sm:text-3xl text-ink tracking-editorial leading-snug">
-                  {b.title}
-                </h3>
-                <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed max-w-prose-wide">
-                  {b.body}
-                </p>
-                <div className="mt-5 flex flex-col sm:flex-row gap-x-10 gap-y-3 text-sm">
-                  <div className="flex items-start gap-3">
-                    <span className="eyebrow mt-1">Outcome</span>
-                    <span className="text-ink font-medium font-serif text-base">{b.outcome}</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="eyebrow mt-1">Pattern</span>
-                    <span className="text-ink-soft text-base">{b.pattern}</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-          ))}
-        </ol>
+            )}
+          </div>
+        ))}
+      </div>
 
-        <p className="mt-12 text-sm text-smoke italic max-w-2xl leading-relaxed">
-          The point isn&apos;t the tools — it&apos;s the operating posture. The same structured outputs, validation, and human-in-the-loop design that let me ship these for myself are what I bring to AI products at enterprise scale.
-        </p>
-      </Container>
-    </section>
+      <div className="mt-5 grid sm:grid-cols-2 gap-4 text-sm">
+        <div className="flex items-start gap-3 text-ink-soft">
+          <span className="font-serif text-accent leading-tight">↳</span>
+          <span><strong className="font-medium text-ink">Shadow mode</strong> ran for 6 weeks before any decision was acted on.</span>
+        </div>
+        <div className="flex items-start gap-3 text-ink-soft">
+          <span className="font-serif text-accent leading-tight">⎯⎯</span>
+          <span><strong className="font-medium text-ink">Audit trail</strong> beneath every stage; every decision logged with reasoning; agent actions reversible.</span>
+        </div>
+      </div>
+    </figure>
   )
 }
 
@@ -716,27 +590,142 @@ function Capabilities() {
   return (
     <section id="capabilities" className="py-24 sm:py-32 border-t border-sand">
       <Container>
-        <SectionLabel n="—">Capabilities</SectionLabel>
+        <SectionLabel n="02">Capabilities</SectionLabel>
         <h2 className="display-serif mt-6 text-3xl sm:text-4xl lg:text-5xl max-w-3xl leading-[1.1]">
-          How I lead.
+          What I actually do.
         </h2>
         <p className="mt-5 text-lg text-smoke max-w-2xl leading-relaxed">
-          The full surface area I bring to an AI product organization — strategy, execution, governance, and the leadership work that compounds them.
+          Four areas I spend my time on, and the concrete capabilities underneath each.
         </p>
 
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-10">
-          {CAPABILITIES.map((c) => (
-            <div key={c.group} className="border-t border-sand pt-5">
-              <h3 className="eyebrow text-ink mb-5">{c.group}</h3>
-              <ul className="space-y-3">
-                {c.items.map((item) => (
-                  <li key={item} className="text-base text-ink-soft leading-snug">
-                    {item}
-                  </li>
-                ))}
-              </ul>
+        {/* Lead block — the four pillars in long form */}
+        <div className="mt-16 grid md:grid-cols-2 gap-y-12 gap-x-16">
+          {PILLARS.map((p) => (
+            <div key={p.n} className="border-t border-sand pt-6">
+              <div className="flex items-baseline gap-4">
+                <span className="font-serif text-sm text-accent">{p.n}</span>
+                <h3 className="font-serif text-xl sm:text-2xl text-ink tracking-editorial">
+                  {p.title}
+                </h3>
+              </div>
+              <p className="mt-4 text-base text-ink-soft leading-relaxed max-w-md">
+                {p.body}
+              </p>
             </div>
           ))}
+        </div>
+
+        {/* Capabilities grid — concrete skills underneath */}
+        <div className="mt-24 pt-12 border-t border-sand">
+          <p className="eyebrow mb-8">Concrete capabilities</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-10">
+            {CAPABILITIES.map((c) => (
+              <div key={c.group} className="border-t border-sand pt-5">
+                <h3 className="eyebrow text-ink mb-5">{c.group}</h3>
+                <ul className="space-y-3">
+                  {c.items.map((item) => (
+                    <li key={item} className="text-base text-ink-soft leading-snug">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </section>
+  )
+}
+
+function Judgment() {
+  return (
+    <section id="judgment" className="py-24 sm:py-32 border-t border-sand">
+      <Container>
+        <SectionLabel n="03">Judgment</SectionLabel>
+        <h2 className="display-serif mt-6 text-3xl sm:text-4xl lg:text-5xl max-w-3xl leading-[1.1]">
+          Calls I keep making.
+        </h2>
+        <p className="mt-5 text-lg text-smoke max-w-2xl leading-relaxed">
+          The most important AI product decisions in regulated work are rarely about model choice. They are about where to standardize, where to keep humans, and what to refuse to ship.
+        </p>
+
+        <div className="mt-20 max-w-prose-wide divide-y divide-sand">
+          {JUDGMENT.map((j) => (
+            <div key={j.n} className="grid grid-cols-12 gap-6 py-10 first:pt-0">
+              <div className="col-span-12 sm:col-span-2">
+                <span className="font-serif text-3xl text-accent leading-none">{j.n}</span>
+              </div>
+              <div className="col-span-12 sm:col-span-10">
+                <h3 className="font-serif text-xl sm:text-2xl text-ink tracking-editorial mb-5">
+                  {j.title}
+                </h3>
+                <dl className="space-y-3 text-base leading-relaxed">
+                  <div className="grid sm:grid-cols-[8rem_1fr] gap-x-6 gap-y-1">
+                    <dt className="eyebrow pt-1">Tension</dt>
+                    <dd className="text-ink-soft">{j.tension}</dd>
+                  </div>
+                  <div className="grid sm:grid-cols-[8rem_1fr] gap-x-6 gap-y-1">
+                    <dt className="eyebrow pt-1">Call I make</dt>
+                    <dd className="text-ink">{j.judgment}</dd>
+                  </div>
+                  <div className="grid sm:grid-cols-[8rem_1fr] gap-x-6 gap-y-1">
+                    <dt className="eyebrow pt-1">Why</dt>
+                    <dd className="text-smoke italic">{j.why}</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+  )
+}
+
+function GovernanceToolkit() {
+  return (
+    <section id="toolkit" className="py-24 sm:py-32 bg-paper-dark border-t border-sand">
+      <Container>
+        <SectionLabel n="04">Toolkit</SectionLabel>
+        <h2 className="display-serif mt-6 text-3xl sm:text-4xl lg:text-5xl max-w-3xl leading-[1.1]">
+          The controls I argue for.
+        </h2>
+        <p className="mt-5 text-lg text-smoke max-w-2xl leading-relaxed">
+          Most of these are dull. Most of them are the difference between an AI feature that gets to production and one that gets pulled in week six.
+        </p>
+
+        <div className="mt-16 space-y-14">
+          {GOVERNANCE_TOOLKIT.map((g) => (
+            <div key={g.group} className="grid lg:grid-cols-12 gap-y-6 gap-x-12">
+              <div className="lg:col-span-3">
+                <h3 className="eyebrow text-ink">{g.group}</h3>
+              </div>
+              <dl className="lg:col-span-9 grid sm:grid-cols-2 gap-x-10 gap-y-6">
+                {g.items.map((item) => (
+                  <div key={item.title}>
+                    <dt className="font-serif text-lg text-ink tracking-editorial">{item.title}</dt>
+                    <dd className="mt-1.5 text-sm text-ink-soft leading-relaxed">{item.body}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          ))}
+        </div>
+
+        {/* Operating beliefs — folded in from the cut Writing section */}
+        <div className="mt-24 pt-12 border-t border-sand">
+          <p className="eyebrow mb-6">Operating beliefs</p>
+          <ol className="divide-y divide-sand max-w-3xl">
+            {POV_IDEAS.map((idea, i) => (
+              <li key={i} className="flex items-start gap-6 py-5 first:pt-0">
+                <span className="font-serif text-sm text-accent mt-1 w-6 flex-shrink-0">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className="text-base sm:text-lg text-ink-soft leading-relaxed">{idea}</span>
+              </li>
+            ))}
+          </ol>
         </div>
       </Container>
     </section>
@@ -747,12 +736,12 @@ function CareerArc() {
   return (
     <section id="career" className="py-24 sm:py-32 border-t border-sand">
       <Container>
-        <SectionLabel n="—">Career arc</SectionLabel>
+        <SectionLabel n="05">Career</SectionLabel>
         <h2 className="display-serif mt-6 text-3xl sm:text-4xl lg:text-5xl max-w-3xl leading-[1.1]">
-          How I arrived at AI product leadership.
+          Three acts.
         </h2>
         <p className="mt-5 text-lg text-smoke max-w-2xl leading-relaxed">
-          Three eras — each one made the next one possible.
+          Each act made the next one possible. The AI work is the most recent layer; the data and platform years are why it ships.
         </p>
 
         <ol className="mt-16 divide-y divide-sand">
@@ -778,240 +767,23 @@ function CareerArc() {
   )
 }
 
-function AgenticDiagram() {
-  const stages = [
-    { label: 'Intake', sub: 'Structured input' },
-    { label: 'Agent', sub: 'LLM + tools' },
-    { label: 'Validation', sub: 'Schema · policy' },
-    { label: 'Policy gate', sub: 'Risk-aware' },
-    { label: 'Outcome', sub: 'Auditable' },
-  ]
-  return (
-    <figure className="my-16 max-w-prose-wide" aria-label="Agentic workflow pattern with human-in-the-loop and continuous audit trail">
-      <figcaption className="eyebrow mb-5">The agentic pattern I build</figcaption>
-
-      {/* Horizontal on desktop, stacked on mobile */}
-      <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 sm:gap-2 items-stretch">
-        {stages.map((s, i) => (
-          <div key={s.label} className="relative">
-            <div className="border border-sand bg-paper rounded-md px-3 py-4 h-full flex flex-col justify-center">
-              <div className="font-serif text-base text-ink leading-tight">{s.label}</div>
-              <div className="text-[11px] text-dust mt-1 tracking-wide">{s.sub}</div>
-            </div>
-            {i < stages.length - 1 && (
-              <div className="hidden sm:flex absolute top-1/2 -right-1.5 -translate-y-1/2 z-10 text-accent">
-                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <path d="M0 5h10M6 1l5 4-5 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-
-      {/* Human-in-the-loop branch + audit baseline */}
-      <div className="mt-5 grid sm:grid-cols-2 gap-4 text-sm">
-        <div className="flex items-start gap-3 text-ink-soft">
-          <span className="font-serif text-accent leading-tight">↳</span>
-          <span><strong className="font-medium text-ink">Human review</strong> on policy-sensitive paths — designed, not reactive.</span>
-        </div>
-        <div className="flex items-start gap-3 text-ink-soft">
-          <span className="font-serif text-accent leading-tight">⎯⎯</span>
-          <span><strong className="font-medium text-ink">Audit trail</strong> runs continuously beneath every stage; agent actions are reversible.</span>
-        </div>
-      </div>
-    </figure>
-  )
-}
-
-function GovernanceToolkit() {
-  return (
-    <section id="toolkit" className="py-24 sm:py-32 bg-paper-dark border-t border-sand">
-      <Container>
-        <SectionLabel n="03">Governance toolkit</SectionLabel>
-        <h2 className="display-serif mt-6 text-3xl sm:text-4xl lg:text-5xl max-w-3xl leading-[1.1]">
-          The control surface I actually build.
-        </h2>
-        <p className="mt-5 text-lg text-smoke max-w-2xl leading-relaxed">
-          Twelve concrete mechanisms — grouped by what they protect — that let agentic systems ship inside regulated environments without becoming a liability.
-        </p>
-
-        <div className="mt-16 space-y-14">
-          {GOVERNANCE_TOOLKIT.map((g) => (
-            <div key={g.group} className="grid lg:grid-cols-12 gap-y-6 gap-x-12">
-              <div className="lg:col-span-3">
-                <h3 className="eyebrow text-ink">{g.group}</h3>
-              </div>
-              <dl className="lg:col-span-9 grid sm:grid-cols-2 gap-x-10 gap-y-6">
-                {g.items.map((item) => (
-                  <div key={item.title}>
-                    <dt className="font-serif text-lg text-ink tracking-editorial">{item.title}</dt>
-                    <dd className="mt-1.5 text-sm text-ink-soft leading-relaxed">{item.body}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </section>
-  )
-}
-
-function Judgment() {
-  return (
-    <section id="judgment" className="py-24 sm:py-32 border-t border-sand">
-      <Container>
-        <SectionLabel n="02">Judgment</SectionLabel>
-        <h2 className="display-serif mt-6 text-3xl sm:text-4xl lg:text-5xl max-w-3xl leading-[1.1]">
-          Product judgment under constraint.
-        </h2>
-        <p className="mt-5 text-lg text-smoke max-w-2xl leading-relaxed">
-          The most important AI product decisions in regulated environments are rarely about model choice. They are about where to standardize, where to preserve human judgment, how to manage risk, and how to build AI systems that scale without losing control.
-        </p>
-
-        <div className="mt-20 max-w-prose-wide divide-y divide-sand">
-          {JUDGMENT.map((j) => (
-            <div key={j.n} className="grid grid-cols-12 gap-6 py-10 first:pt-0">
-              <div className="col-span-12 sm:col-span-2">
-                <span className="font-serif text-3xl text-accent leading-none">{j.n}</span>
-              </div>
-              <div className="col-span-12 sm:col-span-10">
-                <h3 className="font-serif text-xl sm:text-2xl text-ink tracking-editorial mb-5">
-                  {j.title}
-                </h3>
-                <dl className="space-y-3 text-base leading-relaxed">
-                  <div className="grid sm:grid-cols-[8rem_1fr] gap-x-6 gap-y-1">
-                    <dt className="eyebrow pt-1">Tension</dt>
-                    <dd className="text-ink-soft">{j.tension}</dd>
-                  </div>
-                  <div className="grid sm:grid-cols-[8rem_1fr] gap-x-6 gap-y-1">
-                    <dt className="eyebrow pt-1">Judgment</dt>
-                    <dd className="text-ink">{j.judgment}</dd>
-                  </div>
-                  <div className="grid sm:grid-cols-[8rem_1fr] gap-x-6 gap-y-1">
-                    <dt className="eyebrow pt-1">Why it mattered</dt>
-                    <dd className="text-smoke italic">{j.why}</dd>
-                  </div>
-                </dl>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </section>
-  )
-}
-
-function Impact() {
-  return (
-    <section id="impact" className="py-24 sm:py-32 bg-paper-dark border-t border-sand">
-      <Container>
-        <SectionLabel n="03">Impact</SectionLabel>
-        <h2 className="display-serif mt-6 text-3xl sm:text-4xl lg:text-5xl max-w-3xl leading-[1.1]">
-          Selected impact.
-        </h2>
-        <p className="mt-5 text-lg text-smoke max-w-2xl leading-relaxed">
-          A consolidated view of the operating shifts behind the work above — grouped by where the leverage came from.
-        </p>
-
-        <div className="mt-20 divide-y divide-sand">
-          {IMPACT.map((g) => (
-            <div key={g.group} className="grid lg:grid-cols-12 gap-y-5 gap-x-12 py-10 first:pt-0">
-              <div className="lg:col-span-3">
-                <h3 className="eyebrow text-ink">{g.group}</h3>
-              </div>
-              <ul className="lg:col-span-9 space-y-3">
-                {g.items.map((item, i) => (
-                  <li key={i} className="flex items-start gap-4 text-base sm:text-lg text-ink-soft leading-relaxed">
-                    <span className="text-accent mt-1.5 h-1 w-1 rounded-full bg-accent flex-shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </section>
-  )
-}
-
-function Writing() {
-  return (
-    <section id="writing" className="py-24 sm:py-32 border-t border-sand">
-      <Container>
-        <SectionLabel n="04">Writing</SectionLabel>
-        <h2 className="display-serif mt-6 text-3xl sm:text-4xl lg:text-5xl max-w-3xl leading-[1.1]">
-          My point of view.
-        </h2>
-
-        {/* Pull quote */}
-        <figure className="mt-16 max-w-4xl">
-          <blockquote className="display-serif text-3xl sm:text-4xl lg:text-5xl leading-[1.15] text-ink">
-            <span className="text-accent">&ldquo;</span>AI should reduce friction without removing accountability.<span className="text-accent">&rdquo;</span>
-          </blockquote>
-        </figure>
-
-        {/* Supporting ideas */}
-        <div className="mt-20 grid lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-4">
-            <p className="eyebrow mb-3">Operating beliefs</p>
-            <p className="text-base text-smoke leading-relaxed max-w-xs">
-              Five working principles that guide how I build AI products inside regulated environments.
-            </p>
-          </div>
-          <ol className="lg:col-span-8 divide-y divide-sand">
-            {POV_IDEAS.map((idea, i) => (
-              <li key={i} className="flex items-start gap-6 py-5 first:pt-0">
-                <span className="font-serif text-sm text-accent mt-1 w-6 flex-shrink-0">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <span className="text-base sm:text-lg text-ink-soft leading-relaxed">{idea}</span>
-              </li>
-            ))}
-          </ol>
-        </div>
-
-        {/* Articles — placeholders */}
-        <div className="mt-20">
-          <p className="eyebrow mb-6">Essays in progress</p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {ARTICLES.map((a) => (
-              <div
-                key={a.title}
-                className="border-t border-ink/15 pt-6 group"
-              >
-                <h3 className="font-serif text-xl text-ink leading-snug tracking-editorial">
-                  {a.title}
-                </h3>
-                <p className="mt-3 text-sm text-dust">{a.status}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Container>
-    </section>
-  )
-}
-
 function Contact() {
   return (
     <section id="contact" className="py-24 sm:py-32 border-t border-sand">
       <Container>
-        <SectionLabel n="05">Contact</SectionLabel>
+        <SectionLabel n="06">Contact</SectionLabel>
 
         <div className="mt-10 grid lg:grid-cols-12 gap-12 lg:gap-20">
           <div className="lg:col-span-7">
             <p className="inline-flex items-center gap-2 text-sm text-accent mb-5">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              Open to senior AI product leadership roles
+              Currently open to Head of Product / VP roles in regulated AI
             </p>
             <h2 className="display-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">
-              Let&apos;s connect.
+              Let&apos;s talk.
             </h2>
             <p className="mt-8 text-lg sm:text-xl text-ink-soft leading-relaxed max-w-prose-tight">
-              I&apos;m interested in senior product leadership opportunities at the intersection of AI, enterprise platforms, regulatory systems, and workflow transformation — especially where agentic systems need to ship under governance and control.
+              Most useful conversations I have are with founders, CPOs and CXOs at banks, fintechs, and regulated SaaS companies trying to ship AI under governance. If that sounds like your problem, email me.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
               <a href={`mailto:${LINKS.email}`} className="btn-quiet font-medium">
@@ -1097,7 +869,7 @@ function Footer() {
       <Container>
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-sm text-smoke max-w-xl leading-relaxed">
-            Gatikrishna Dash — Product leadership for trusted AI and regulated enterprise platforms.
+            Gatikrishna Dash — AI and platform product leadership in regulated industries.
           </p>
           <p className="text-xs text-dust">
             © {new Date().getFullYear()} · Hyderabad, India
@@ -1118,15 +890,11 @@ export default function App() {
       <NavBar />
       <main>
         <Profile />
-        <WhatIBuild />
-        <Capabilities />
-        <CareerArc />
-        <AgenticBuilds />
         <SelectedWork />
-        <GovernanceToolkit />
+        <Capabilities />
         <Judgment />
-        <Impact />
-        <Writing />
+        <GovernanceToolkit />
+        <CareerArc />
         <Contact />
       </main>
       <Footer />

@@ -341,7 +341,7 @@ const LINKS = {
   email: 'gati4dash@gmail.com',
   linkedin: 'https://www.linkedin.com/in/gati-dash',
   resume: '/GatiDash_SF.pdf',
-  photo: '/profile.png', // place your photo at public/profile.png
+  photo: '/profile.jpg', // place your photo at public/profile.jpg
   location: 'Hyderabad, India',
 }
 
@@ -367,16 +367,22 @@ function SectionLabel({ n, children }) {
   )
 }
 
-function Avatar({ src, alt }) {
+function Avatar({ src, alt, size = 'large' }) {
   const [failed, setFailed] = useState(false)
+
+  const dim =
+    size === 'small'
+      ? 'w-20 h-20'
+      : 'w-48 h-48 sm:w-52 sm:h-52'
+  const monogram = size === 'small' ? 'text-xl' : 'text-5xl'
 
   if (failed) {
     return (
       <div
-        className="w-48 h-48 sm:w-52 sm:h-52 rounded-md border border-sand bg-paper-dark flex items-center justify-center"
+        className={`${dim} rounded-md border border-sand bg-paper-dark flex items-center justify-center flex-shrink-0`}
         aria-label={alt}
       >
-        <span className="font-serif text-5xl text-accent leading-none">GD</span>
+        <span className={`font-serif ${monogram} text-accent leading-none`}>GD</span>
       </div>
     )
   }
@@ -386,7 +392,7 @@ function Avatar({ src, alt }) {
       src={src}
       alt={alt}
       onError={() => setFailed(true)}
-      className="w-48 h-48 sm:w-52 sm:h-52 rounded-md object-cover border border-sand grayscale-[8%]"
+      className={`${dim} rounded-md object-cover border border-sand grayscale-[8%] flex-shrink-0`}
       loading="eager"
     />
   )
@@ -431,6 +437,18 @@ function Profile() {
   return (
     <section id="profile" className="relative pt-36 pb-28 sm:pt-44 sm:pb-36 lg:pt-52">
       <Container>
+        {/* Mobile-only identity strip — photo lands above the fold */}
+        <div className="lg:hidden flex items-center gap-5 mb-10">
+          <Avatar src={LINKS.photo} alt="Portrait of Gatikrishna Dash" size="small" />
+          <div className="min-w-0">
+            <p className="font-serif text-2xl text-ink leading-tight">Gatikrishna Dash</p>
+            <p className="text-sm text-smoke mt-1.5 inline-flex items-center gap-1.5">
+              <MapPin className="h-3 w-3 text-dust" />
+              Hyderabad, India
+            </p>
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
           {/* Main column */}
           <div className="lg:col-span-8">
@@ -483,8 +501,8 @@ function Profile() {
             </div>
           </div>
 
-          {/* Right-aligned profile card */}
-          <aside className="lg:col-span-4 lg:pl-8 lg:border-l border-sand">
+          {/* Right-aligned profile card — desktop only; mobile uses the identity strip above */}
+          <aside className="hidden lg:block lg:col-span-4 lg:pl-8 lg:border-l border-sand">
             <div className="lg:sticky lg:top-28">
               <Avatar src={LINKS.photo} alt="Portrait of Gatikrishna Dash" />
               <dl className="mt-7 space-y-5 text-sm">

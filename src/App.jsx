@@ -204,6 +204,34 @@ const IMPACT = [
   },
 ]
 
+// EDIT TITLES AND DESCRIPTIONS TO MATCH YOUR ACTUAL CLAUDE SKILLS / BUILDS
+const AGENTIC_BUILDS = [
+  {
+    n: '01',
+    title: 'Regulatory research & synthesis agent',
+    role: 'Claude skill · Multi-step orchestration',
+    body: 'An agentic skill that takes a research prompt, runs structured multi-source retrieval, validates citations, and returns audit-ready synthesis with sources preserved. Built with the same structured-output and validation patterns I apply to enterprise agentic systems.',
+    outcome: '~80% time compression on research-heavy workflows.',
+    pattern: 'Structured output · Citation validation · Reusable across regulatory topics',
+  },
+  {
+    n: '02',
+    title: 'Document analysis & policy-aware drafting',
+    role: 'Agentic workflow · Human-in-the-loop',
+    body: 'An end-to-end workflow that ingests dense regulatory or product documents, extracts structured insights, and generates policy-aware drafts with explicit human review checkpoints before any artifact is finalized.',
+    outcome: 'Repeatable, traceable drafting at a fraction of manual time.',
+    pattern: 'Extraction agent → policy gate → drafting agent → human review',
+  },
+  {
+    n: '03',
+    title: 'Operator-grade skills library',
+    role: 'Claude skills suite · Governance by default',
+    body: 'A growing library of agentic skills built for high-volume professional workflows — each one designed with the same governance scaffolding I bring to enterprise platforms: structured outputs, validation, audit logging, and intentional human override paths.',
+    outcome: 'Daily operating leverage. Production patterns reusable at enterprise scale.',
+    pattern: 'Skill-first design · Composable agents · Governance by default',
+  },
+]
+
 const CAPABILITIES = [
   {
     group: 'AI strategy',
@@ -313,7 +341,7 @@ const LINKS = {
   email: 'gati4dash@gmail.com',
   linkedin: 'https://www.linkedin.com/in/gati-dash',
   resume: '/GatiDash_SF.pdf',
-  photo: '/profile.png', // place your photo at public/profile.png
+  photo: '/profile.jpg', // place your photo at public/profile.jpg
   location: 'Hyderabad, India',
 }
 
@@ -406,7 +434,7 @@ function Profile() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
           {/* Main column */}
           <div className="lg:col-span-8">
-            <p className="eyebrow mb-6">AI Product Leader · Strategy, Governance & Agentic Systems</p>
+            <p className="eyebrow mb-6">AI Product & Transformation Leader · Strategy · Governance · Agentic Systems</p>
             <p className="inline-flex items-center gap-2 text-sm text-accent mb-7">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
               Available for senior AI product leadership roles
@@ -421,7 +449,7 @@ function Profile() {
             </p>
 
             <p className="mt-10 text-base sm:text-lg text-ink-soft leading-relaxed max-w-prose-tight">
-              I lead AI product strategy and the build of agentic systems inside complex, regulated enterprises. My path took me from data engineering through regulatory and governance platforms to AI-native execution — and that range shows up in how I think about AI products: governed by design, anchored in real operations, and built to survive production. I am an alum of the Indian School of Business Senior Digital Leadership Programme.
+              I lead AI product strategy and the transformation of manual, compliance-heavy workflows into governed agentic systems. My path went from data engineering through regulatory and governance platforms to AI-native execution — and that range shows up in how I think about AI products: governed by design, anchored in real operations, and built to survive production. I am an alum of the Indian School of Business Senior Digital Leadership Programme — and I build the agentic systems I lead. Same patterns, same governance, every day in my own workflows.
             </p>
 
             {/* Restrained proof — three short lines with hairline dividers */}
@@ -467,7 +495,7 @@ function Profile() {
                 <div>
                   <dt className="eyebrow mb-1.5">Role</dt>
                   <dd className="text-ink-soft leading-relaxed">
-                    AI Product Leader<br />
+                    AI Product &amp; Transformation Leader<br />
                     Strategy · Governance · Agentic Systems
                   </dd>
                 </div>
@@ -556,7 +584,7 @@ function SelectedWork() {
           Selected work.
         </h2>
         <p className="mt-5 text-lg text-smoke max-w-2xl leading-relaxed">
-          Four AI-product stories from regulated, multi-jurisdiction enterprise environments — each one a study in shipping AI under governance and control. Sanitized of proprietary detail; the operating shifts are real.
+          Same agentic patterns, applied at enterprise scale. Four AI-product stories from regulated, multi-jurisdiction environments — each one a study in shipping AI under governance and control. Sanitized of proprietary detail; the operating shifts are real.
         </p>
 
         <div className="mt-20 space-y-24">
@@ -614,6 +642,55 @@ function Paragraph({ label, body, accent = false }) {
         {body}
       </p>
     </div>
+  )
+}
+
+function AgenticBuilds() {
+  return (
+    <section id="builds" className="py-24 sm:py-32 border-t border-sand">
+      <Container>
+        <SectionLabel n="—">Agentic builds</SectionLabel>
+        <h2 className="display-serif mt-6 text-3xl sm:text-4xl lg:text-5xl max-w-3xl leading-[1.1]">
+          The systems I build to keep operator instincts sharp.
+        </h2>
+        <p className="mt-5 text-lg text-smoke max-w-3xl leading-relaxed">
+          Strategy is only as credible as execution. These are production-grade agentic workflows I&apos;ve designed and run end-to-end using Claude — built with the same governance and orchestration patterns I bring to enterprise transformation work. They are how I keep the craft beneath the strategy sharp.
+        </p>
+
+        <ol className="mt-16 divide-y divide-sand">
+          {AGENTIC_BUILDS.map((b) => (
+            <li key={b.n} className="grid lg:grid-cols-12 gap-y-6 gap-x-12 py-10 first:pt-0">
+              <div className="lg:col-span-3">
+                <div className="font-serif text-3xl text-accent leading-none">{b.n}</div>
+                <div className="eyebrow mt-3">{b.role}</div>
+              </div>
+              <div className="lg:col-span-9">
+                <h3 className="font-serif text-2xl sm:text-3xl text-ink tracking-editorial leading-snug">
+                  {b.title}
+                </h3>
+                <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed max-w-prose-wide">
+                  {b.body}
+                </p>
+                <div className="mt-5 flex flex-col sm:flex-row gap-x-10 gap-y-3 text-sm">
+                  <div className="flex items-start gap-3">
+                    <span className="eyebrow mt-1">Outcome</span>
+                    <span className="text-ink font-medium font-serif text-base">{b.outcome}</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="eyebrow mt-1">Pattern</span>
+                    <span className="text-ink-soft text-base">{b.pattern}</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <p className="mt-12 text-sm text-smoke italic max-w-2xl leading-relaxed">
+          The point isn&apos;t the tools — it&apos;s the operating posture. The same structured outputs, validation, and human-in-the-loop design that let me ship these for myself are what I bring to AI products at enterprise scale.
+        </p>
+      </Container>
+    </section>
   )
 }
 
@@ -1026,6 +1103,7 @@ export default function App() {
         <WhatIBuild />
         <Capabilities />
         <CareerArc />
+        <AgenticBuilds />
         <SelectedWork />
         <GovernanceToolkit />
         <Judgment />
